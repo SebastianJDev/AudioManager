@@ -1,5 +1,6 @@
 # AudioManager 🔊⚙
 
 Con este script podras controlar tus audios y ordenarlos de mejor manera 
-![Audio_Manager](https://user-images.githubusercontent.com/104598507/175130921-f4f59ed2-e58f-4806-8c29-e0de5a9fbee4.jpg)
+![image](https://github.com/SebastianJDev/AudioManager/assets/104598507/4af86c60-a3d1-46e0-bb23-d65fceee0f7a)
+
 
