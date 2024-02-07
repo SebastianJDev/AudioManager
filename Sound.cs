@@ -1,19 +1,20 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
-namespace Root
+public enum SoundType
 {
-    [System.Serializable]
-    public class Sound
-    {
-        public string name;
-        public AudioClip clip;
-        public float volume;
-        public float delay;
-        public float pitch;
-        public bool loop;
+    Music,
+    SoundEffect,
+    Dialogue
+}
 
-        [HideInInspector]
-        public AudioSource source;
-    }
+[System.Serializable]
+public class Sound
+{
+    public string name;
+    public AudioClip clip;
+    [Range(0f, 1f)]
+    public float volume = 1f;
+    public SoundType type;
+    [HideInInspector]
+    public AudioSource source;
 }
