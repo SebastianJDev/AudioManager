@@ -8,6 +8,7 @@ public class AudioManagerEditorWindow : EditorWindow
     private string defaultAudioManagerName = "DefaultAudioManager";
     private GameObject defaultAudioManager;
     private List<Sound> sounds = new List<Sound>();
+    private Vector2 scrollPosition = Vector2.zero;
 
 
     private string newSoundName = "NewSound";
@@ -50,6 +51,11 @@ public class AudioManagerEditorWindow : EditorWindow
 
         float imageWidth = windowWidth;
         float imageHeight = 140;
+        // Definir el área que contendrá los elementos desplazables
+        Rect scrollArea = new Rect(0, 0, position.width - 16, position.height);
+
+        // Iniciar el ScrollView con la posición de desplazamiento actual
+        scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition, GUILayout.Width(position.width), GUILayout.Height(position.height));
 
         Texture2D creatorImage = EditorGUIUtility.Load("Assets/AudioManager/CreatorImage.png") as Texture2D;
         GUILayout.BeginHorizontal();
@@ -134,6 +140,7 @@ public class AudioManagerEditorWindow : EditorWindow
                 GUILayout.EndHorizontal();
             }
         }
+        EditorGUILayout.EndScrollView();
     }
 
     void CreateDefaultAudioManager()
